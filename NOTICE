@@ -1,0 +1,19 @@
+# 版权声明 Copyright Notice
+
+This project includes modifications to code from the ESP-IDF project, which is licensed under the Apache License, Version 2.0.
+
+License: Apache-2.0
+
+2015-2024 Espressif Systems (Shanghai) CO LTD
+
+Path: xf_vfs
+
+Original: https://github.com/espressif/esp-idf/tree/v5.4/components/vfs
+
+Modifications:
+
+- Modified by CorAL on 2025-01-10:
+  1. modified the naming to prevent conflict with the original project.
+  2. Remove posix docking, compatible with other platforms.
+  3. removed esp-idf related dependencies.
+  4. trimmed termios and other functions.
