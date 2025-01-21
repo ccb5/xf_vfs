@@ -31,6 +31,21 @@
 
 #include "xf_vfs_types.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+/**
+ * @cond (XFAPI_PORT || XFAPI_INTERNAL)
+ * @addtogroup group_xf_vfs
+ * @endcond
+ * @{
+ */
+
+/* ==================== [Defines] =========================================== */
+
+/* ==================== [Typedefs] ========================================== */
+
 typedef struct _xf_vfs_entry_t {
     int flags;              /*!< XF_VFS_FLAG_CONTEXT_PTR and/or XF_VFS_FLAG_READONLY_FS or XF_VFS_FLAG_DEFAULT */
     const xf_vfs_fs_ops_t *vfs;          // contains pointers to VFS functions
@@ -86,17 +101,14 @@ const xf_vfs_entry_t *xf_vfs_get_vfs_for_path(const char *path);
  */
 const xf_vfs_entry_t *xf_vfs_get_vfs_for_index(int index);
 
-#ifdef __cplusplus
-extern "C" {
-#endif
-
-/* ==================== [Defines] =========================================== */
-
-/* ==================== [Typedefs] ========================================== */
-
 /* ==================== [Global Prototypes] ================================= */
 
 /* ==================== [Macros] ============================================ */
+
+/**
+ * End of addtogroup group_xf_vfs
+ * @}
+ */
 
 #ifdef __cplusplus
 } /* extern "C" */

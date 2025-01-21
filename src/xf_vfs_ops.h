@@ -37,14 +37,16 @@
 extern "C" {
 #endif
 
+/**
+ * @cond (XFAPI_USER || XFAPI_PORT || XFAPI_INTERNAL)
+ * @addtogroup group_xf_vfs
+ * @endcond
+ * @{
+ */
+
 /* ==================== [Defines] =========================================== */
 
 /* ==================== [Typedefs] ========================================== */
-
-/*
- * @brief VFS identificator used for xf_vfs_register_with_id()
- */
-typedef int xf_vfs_id_t;
 
 #if XF_VFS_SUPPORT_DIR_IS_ENABLE
 /* *INDENT-OFF* */
@@ -291,6 +293,11 @@ xf_err_t xf_vfs_unregister_fs(const char *base_path);
 xf_err_t xf_vfs_unregister_fs_with_id(xf_vfs_id_t id);
 
 /* ==================== [Macros] ============================================ */
+
+/**
+ * End of addtogroup group_xf_vfs
+ * @}
+ */
 
 #ifdef __cplusplus
 } /* extern "C" */
