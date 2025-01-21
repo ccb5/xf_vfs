@@ -48,6 +48,13 @@
 extern "C" {
 #endif
 
+/**
+ * @cond (XFAPI_USER || XFAPI_PORT || XFAPI_INTERNAL)
+ * @addtogroup group_xf_vfs
+ * @endcond
+ * @{
+ */
+
 /* ==================== [Defines] =========================================== */
 
 /* special length value for VFS which is never recognised by open() */
@@ -287,6 +294,11 @@ typedef struct {
 /* ==================== [Global Prototypes] ================================= */
 
 /* ==================== [Macros] ============================================ */
+
+/**
+ * End of addtogroup group_xf_vfs
+ * @}
+ */
 
 #ifdef __cplusplus
 } /* extern "C" */

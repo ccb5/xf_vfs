@@ -25,6 +25,13 @@
  *   4. trimmed termios and other functions.
  */
 
+/**
+ * @cond (XFAPI_USER || XFAPI_PORT || XFAPI_INTERNAL)
+ * @defgroup group_xf_vfs xf_vfs
+ * @brief xf_vfs 虚拟文件系统 (Virtual File System).
+ * @endcond
+ */
+
 #ifndef __XF_VFS_H__
 #define __XF_VFS_H__
 
@@ -45,6 +52,13 @@ extern "C" {
 /* ==================== [Typedefs] ========================================== */
 
 /* ==================== [Global Prototypes] ================================= */
+
+/**
+ * @cond (XFAPI_USER || XFAPI_PORT || XFAPI_INTERNAL)
+ * @addtogroup group_xf_vfs
+ * @endcond
+ * @{
+ */
 
 /**
  * Register a virtual filesystem for given path prefix.
@@ -243,8 +257,6 @@ xf_vfs_ssize_t xf_vfs_pwrite(int fd, const void *src, size_t size, xf_vfs_off_t 
      FD seen by driver : file descriptor used by the driver for the same file prefix.
 
  @endverbatim
- *
- * @param fp         File descriptor where data will be dumped
  */
 void xf_vfs_dump_fds(void);
 
@@ -260,8 +272,6 @@ void xf_vfs_dump_fds(void);
         VFS Path Prefix : file prefix used in the xf_vfs_register call or "NULL"
         VFS entry ptr   : pointer to the xf_vfs_fs_ops_t struct used internally when resolving the calls
  @endverbatim
- *
- * @param fp File descriptor where data will be dumped
  */
 void xf_vfs_dump_registered_paths(void);
 
@@ -318,6 +328,11 @@ void xf_vfs_select_triggered_isr(xf_vfs_select_sem_t sem, int *woken);
 #endif /* XF_VFS_SUPPORT_SELECT_IS_ENABLE */
 
 /* ==================== [Macros] ============================================ */
+
+/**
+ * End of addtogroup group_xf_vfs
+ * @}
+ */
 
 #ifdef __cplusplus
 } /* extern "C" */

@@ -24,29 +24,29 @@ extern "C" {
 
 /* ==================== [Defines] =========================================== */
 
-#if (!defined(XF_VFS_SUPPORT_IO_ENABLE)) || (XF_VFS_SUPPORT_IO_ENABLE)
+#if (!defined(XF_VFS_SUPPORT_IO_ENABLE)) || (XF_VFS_SUPPORT_IO_ENABLE) || defined(__DOXYGEN__)
 #   define XF_VFS_SUPPORT_IO_IS_ENABLE      (1)
 #else
 #   define XF_VFS_SUPPORT_IO_IS_ENABLE      (0)
 #endif
 
-#if (!defined(XF_VFS_SUPPORT_DIR_ENABLE)) || (XF_VFS_SUPPORT_DIR_ENABLE)
+#if (!defined(XF_VFS_SUPPORT_DIR_ENABLE)) || (XF_VFS_SUPPORT_DIR_ENABLE) || defined(__DOXYGEN__)
 #   define XF_VFS_SUPPORT_DIR_IS_ENABLE     (1)
 #else
 #   define XF_VFS_SUPPORT_DIR_IS_ENABLE     (0)
 #endif
 
-#if (!defined(XF_VFS_SUPPORT_SELECT_ENABLE)) || (XF_VFS_SUPPORT_SELECT_ENABLE)
+#if (!defined(XF_VFS_SUPPORT_SELECT_ENABLE)) || (XF_VFS_SUPPORT_SELECT_ENABLE) || defined(__DOXYGEN__)
 #   define XF_VFS_SUPPORT_SELECT_IS_ENABLE     (1)
 #else
 #   define XF_VFS_SUPPORT_SELECT_IS_ENABLE     (0)
 #endif
 
-#if !defined(XF_VFS_MAX_COUNT)
+#if !defined(XF_VFS_MAX_COUNT) || defined(__DOXYGEN__)
 #   define XF_VFS_MAX_COUNT                 (8)
 #endif
 
-#if (!defined(XF_VFS_CUSTOM_FD_SETSIZE_ENABLE)) || (XF_VFS_CUSTOM_FD_SETSIZE_ENABLE)
+#if (!defined(XF_VFS_CUSTOM_FD_SETSIZE_ENABLE)) || (XF_VFS_CUSTOM_FD_SETSIZE_ENABLE) || defined(__DOXYGEN__)
 #   define XF_VFS_CUSTOM_FD_SETSIZE_IS_ENABLE   (1)
 #else
 #   define XF_VFS_CUSTOM_FD_SETSIZE_IS_ENABLE   (0)
@@ -56,21 +56,21 @@ extern "C" {
  * Maximum number of (global) file descriptors.
  * for compatibility with fd_set and select()
  */
-#if XF_VFS_CUSTOM_FD_SETSIZE_IS_ENABLE
+#if XF_VFS_CUSTOM_FD_SETSIZE_IS_ENABLE || defined(__DOXYGEN__)
 #   define XF_VFS_FDS_MAX               XF_VFS_CUSTOM_FD_SETSIZE
 #else
 #   define XF_VFS_FDS_MAX               FD_SETSIZE
 #endif
 
-#if !defined(XF_VFS_CUSTOM_FD_SETSIZE)
+#if !defined(XF_VFS_CUSTOM_FD_SETSIZE) || defined(__DOXYGEN__)
 #   define XF_VFS_CUSTOM_FD_SETSIZE         (64)
 #endif
 
-#if !defined(XF_VFS_PATH_MAX)
+#if !defined(XF_VFS_PATH_MAX) || defined(__DOXYGEN__)
 #   define XF_VFS_PATH_MAX                  (15)
 #endif
 
-#if !defined(XF_VFS_DIRENT_NAME_SIZE)
+#if !defined(XF_VFS_DIRENT_NAME_SIZE) || defined(__DOXYGEN__)
 #   define XF_VFS_DIRENT_NAME_SIZE          (256)
 #endif
 
